@@ -21,7 +21,7 @@ marginHeight = h - margin*2
 
 #==========================================
 #Fonts
-fontVers = '190928V1'
+fontVers = '190930V2'
 fontName = 'Elfreth'
 myFontLight = 'Elfreth%s-Light' % fontVers
 myFontReg = 'Elfreth%s-Regular' % fontVers
@@ -273,11 +273,9 @@ kernGuy(38,numberWords,(h * 2))
 
 #==========================================
 #Export
-path = "/Users/jtd/Your team Dropbox/JTD/Drawbot/TypeProofer/GeneratedProof/JTD_Proof_%s.pdf" % fontName
-deletePath = "/Users/jtd/Documents/DeleteStuff/JTD_Proof_%s.pdf" % fontName
+path = "/Users/jtd/Documents/DeleteStuff/JTD_Proof_%s.pdf" % fontName
 saveImage(path)
-saveImage(deletePath)
 
 # open the animation
 import os
-os.system(f"open -a Safari {deletePath}")
+os.system(f"open -a Safari {path}")
