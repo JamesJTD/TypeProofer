@@ -26,8 +26,19 @@ ucYWords = "Yammer Yb Yc Yd Yellow Yf Yg Yh Yi Yj Yk Ylem Ym Ynambu Yonder Yp Yq
 ucZWords = "Zambia Zb Zc Zd Zepplin Zf Zg Zhenjiang Zipper Zj Zk Zl Zm Zn Zooligical Zp Zq Zr Zsigmondy Zt Zulu Zv Zw Zx Zy Zz"
 
 
+lcASpacing = "aaaann baabnn caacnn daadnn eaaenn faafnn gaagnn haahnn iaainn jaajnn kaaknn laalnn maamnn naannn oaaonn paapnn qaaqnn raarnn saasnn taatnn uaaunn vaavnn waawnn xaaxnn yaaynn zaaznn"
+
+
 lcLSpacing = "allann bllbnn cllcnn dlldnn ellenn fllfnn gllgnn hllhnn illinn jlljnn kllknn mllmnn nllnnn ollonn pllpnn qllqnn rllrnn sllsnn tlltnn ullunn vllvnn wllwnn xllxnn yllynn zllznn"
 lcSSpacing = "assann bssbnn csscnn dssdnn essenn fssfnn gssgnn hsshnn issinn jssjnn kssknn lsslnn mssmnn nssnnn ossonn psspnn qssqnn rssrnn tsstnn ussunn vssvnn wsswnn xssxnn yssynn zssznn"
+lcTSpacing = "attann bttbnn cttcnn dttdnn ettenn fttfnn gttgnn htthnn ittinn jttjnn kttknn lttlnn mttmnn nttnnn ottonn pttpnn qttqnn rttrnn sttsnn uttunn vttvnn wttwnn xttxnn yttynn zttznn"
+lcUSpacing = "auuann buubnn cuucnn duudnn euuenn fuufnn guugnn huuhnn iuuinn juujnn kuuknn luulnn muumnn nuunnn ouuonn puupnn quuqnn ruurnn suusnn tuutnn vuuvnn wuuwnn xuuxnn yuuynn zuuznn"
+lcVSpacing = "avvann bvvbnn cvvcnn dvvdnn evvenn fvvfnn gvvgnn hvvhnn ivvinn jvvjnn kvvknn mvvmnn nvvnnn ovvonn pvvpnn qvvqnn rvvrnn svvsnn tvvtnn uvvunn vvvvnn wvvwnn xvvxnn yvvynn zvvznn"
+lcWSpacing = "awwann bwwbnn cwwcnn dwwdnn ewwenn fwwfnn gwwgnn hwwhnn iwwinn jwwjnn kwwknn mwwmnn nwwnnn owwonn pwwpnn qwwqnn rwwrnn swwsnn twwtnn uwwunn vwwvnn wwwwnn xwwxnn ywwynn zwwznn"
+lcXSpacing = "axxann bxxbnn cxxcnn dxxdnn exxenn fxxfnn gxxgnn hxxhnn ixxinn jxxjnn kxxknn mxxmnn nxxnnn oxxonn pxxpnn qxxqnn rxxrnn sxxsnn txxtnn uxxunn vxxvnn wxxwnn xxxxnn yxxynn zxxznn"
+lcYSpacing = "ayyann byybnn cyycnn dyydnn eyyenn fyyfnn gyygnn hyyhnn iyyinn jyyjnn kyyknn myymnn nyynnn oyyonn pyypnn qyyqnn ryyrnn syysnn tyytnn uyyunn vyyvnn wyywnn xyyxnn yyyynn zyyznn"
+lcZSpacing = "azzann bzzbnn czzcnn dzzdnn ezzenn fzzfnn gzzgnn hzzhnn izzinn jzzjnn kzzknn mzzmnn nzznnn ozzonn pzzpnn qzzqnn rzzrnn szzsnn tzztnn uzzunn vzzvnn wzzwnn xzzxnn yzzynn zzzznn"
+
 
 
 numberWords = "0102030405060708090 101121314115161718191 20212232425262728292 30313233435363738393 40414243445464748494 50515253545565758595 60616263646566768696 70717273747576778797 80818283848586878898 9091929394959697989"
@@ -39,7 +50,7 @@ numberWords = "0102030405060708090 101121314115161718191 20212232425262728292 30
 
 ucWords =  '''AachenAbbrevAccordAdmonishAetherAfternoonAggressiveAhAimsAjaxAkAlmostAmAndAoApAquaArnheimAshesAtmostAuralAvowAwakeAxeAyeAz
 BambinoBbBcBdBeefBfBgBhBillyBjBkBlBmBnBopperBpBqBruceBsBtBubbleBvBwBxByobBz
-CaliCbCcCdCelloCfCgChicagoCincoCjCkCloudCmCnCopperCpCqCrustyCsCtCulpepperCvCwCxCynwydCzech
+CaliCbCcCdCewwoCfCgChicagoCincoCjCkCloudCmCnCopperCpCqCrustyCsCtCulpepperCvCwCxCynwydCzech
 DaDbDcDdDepartmentDfDgDhDiDjDkDlDmDnDoDpDqDrDsDtDuDvDwDxDyDz
 EaEbEcEdEeEfEgEhEiEjEkElEmEnEoEpEqErEsEtEuEvEwExEyEz
 FaintFbFcFdFeFfFgFhFinalFjFkFlFmFnForrestFpFqFrontFsFtFunnyFvFwFxFyFz
