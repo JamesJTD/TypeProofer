@@ -241,10 +241,34 @@ PageName = fontName
 kernGuy(38,ucZWords,(h * 2))
 
 PageName = fontName
+kernGuy(38,lcASpacing,(h * 2))
+
+PageName = fontName
 kernGuy(38,lcLSpacing,(h * 2))
 
 PageName = fontName
 kernGuy(38,lcSSpacing,(h * 2))
+
+PageName = fontName
+kernGuy(38,lcTSpacing,(h * 2))
+
+PageName = fontName
+kernGuy(38,lcUSpacing,(h * 2))
+
+PageName = fontName
+kernGuy(38,lcVSpacing,(h * 2))
+
+PageName = fontName
+kernGuy(38,lcWSpacing,(h * 2))
+
+PageName = fontName
+kernGuy(38,lcXSpacing,(h * 2))
+
+PageName = fontName
+kernGuy(38,lcYSpacing,(h * 2))
+
+PageName = fontName
+kernGuy(38,lcZSpacing,(h * 2))
 
 PageName = fontName
 kernGuy(38,numberWords,(h * 2))
