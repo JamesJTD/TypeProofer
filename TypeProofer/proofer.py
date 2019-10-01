@@ -21,7 +21,7 @@ marginHeight = h - margin*2
 
 #==========================================
 #Fonts
-fontVers = '190930V2'
+fontVers = '190930V9'
 fontName = 'Elfreth'
 myFontLight = 'Elfreth%s-Light' % fontVers
 myFontReg = 'Elfreth%s-Regular' % fontVers
@@ -146,7 +146,6 @@ logo()
 newPage(w, h) 
 PageName = fontName
 header()
-#logo()
 
 font(myFontReg, 40)
 fill(0)
