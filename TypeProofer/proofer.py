@@ -4,53 +4,74 @@ import sys
 import datetime
 sys.path.append('/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/')
 
-from UDHR import *
+#This document doesn’t need to be included yet
+#from UDHR import *
+
 from MiscWords import *
 
+
+#==========================================
+#Document Size and Margin information
 size('Letter')
 
 
-w = 612
-h = 792
-
-
-margin = 60
+margin = 40
 lineGap = -20
-marginWidth = w - margin*2
-marginHeight = h - margin*2
+marginWidth = width() - margin*2
+marginHeight = height() - margin*2
+h = height()
+
+#==========================================
+#Foundry
+
+foundryCopyright = '© JTD, LLC 2019'
 
 #==========================================
 #Fonts
-fontVers = '190930V9'
+fontVers = '191001V4'
 fontName = 'Elfreth'
 myFontLight = 'Elfreth%s-Light' % fontVers
 myFontReg = 'Elfreth%s-Regular' % fontVers
 myFontBold = 'Elfreth%s-Bold' % fontVers
 myFontBlack = 'Elfreth%s-Black' % fontVers
 
-fontFamily = [myFontLight, myFontReg, myFontBold, myFontBlack]
+#fontFamily = [myFontLight, myFontReg, myFontBold, myFontBlack]
+
+proofFontSize = 36
+
 
 captionFont = 'ArrayMonoV1001-Regular'
 captionSize = 9
 
 PageName = fontName
 
+fontFamily = []
+
+import os
+for file in os.listdir('/Users/jtd/JTD Type Dropbox/JTD/TypeTools/TypeProofer/TypeProofer/prooferFonts'):
+    if file.endswith(".otf"):
+        fontFamily += [file]
+        print(file)
+
+#fontFamily = []
+
+
 #==========================================
 #Misc Functions
-            
-#Kerning/Spacing Function
-def kernGuy(fSize,letter,pageLength):
-    newPage(w, pageLength)
+             
+#Kerning/Spacing Function with uses individual strings for each letter
+def kernGuy(fSize,letterString,pageLength):
+    newPage(width(), pageLength)
     header()
     #logo()
     translate(0, height()-margin)
     save()
-    for fontName in fontFamily:
+    for fName in fontFamily:
 
         txtHeight = (marginHeight * 2) / len(fontFamily)
         fs = FormattedString(
-            letter,
-            font=fontName,
+            letterString,
+            font=fName,
             fontSize=fSize,
             lineHeight=40,
             fill=0,
@@ -58,9 +79,39 @@ def kernGuy(fSize,letter,pageLength):
         )
         translate(0, -txtHeight)
         t = textBox(fs, (margin, (0-(margin / 2)), marginWidth, txtHeight))
+
     restore()
-    captionText = "K"
-    caption(0,40)
+
+
+#Kerning/Spacing Function Version 2 which uses tuples instead of individual strings
+def kernGuy2(fSize,pageLength):
+    t = ''
+    for a in ucWords:
+        primaryLetter,text = a
+        t += f"{text}"
+        newPage(width(), pageLength)
+        header()
+        #logo()
+        translate(0, height()-margin)
+        save()
+        for fName in fontFamily:
+
+            txtHeight = (marginHeight * 2) / len(fontFamily)
+            fs = FormattedString(
+                t,
+                font=fName,
+                fontSize=fSize,
+                lineHeight=fSize * 1.1,
+                fill=0,
+                align="left"
+            )
+            translate(0, -txtHeight)
+            f = textBox(fs, (margin, (0-(margin / 2)), marginWidth, txtHeight))
+
+            
+        restore()
+        caption(f"{primaryLetter}", 0,0)
+
 #==========================================
 #Universal Elements
 
@@ -83,17 +134,17 @@ def header():
         fill=0,
         align="center"
     )
-    textBox(fs, (0,9,w,40))  
+    textBox(fs, (0,9,width(),40))  
 
     
     fsRight = FormattedString(
-        '© JTD, LLC 2019', 
+        foundryCopyright, 
         font=captionFont,
         fontSize=captionSize,
         fill=0,
         align="right"
     )
-    text(fsRight, (w-margin-90, 40)) 
+    text(fsRight, (width()-margin-90, 40)) 
     
 def logo():
     path = '/Users/jtd/Your team Dropbox/JTD/Assets/LogoLibrary/190428/JTD_NoBox.png'
@@ -101,10 +152,8 @@ def logo():
     
     lW, lH = imageSize(path)
     
-    #size((lW-20), (lH-20))
-    #image('/Users/jtd/Dropbox/JTD/SharedJTD/Logo/Assets/JTD_Logo.png', (100, 100))
 
-def caption(x,y):
+def caption(captionText,x,y):
     fs = FormattedString(
         captionText, 
         font=captionFont,
@@ -112,7 +161,7 @@ def caption(x,y):
         fill=0,
         align="center"
     ) 
-    textBox(fs, (x,y,w,80))
+    textBox(fs, (x,y,width(),20))
     
 #==========================================
 #Page 1
@@ -127,7 +176,7 @@ fs = FormattedString(
         fill=0,
         align="center"
     )
-textBox(fs, (0, 320, w, 158))
+textBox(fs, (0, 320, width(), 158))
 
 fs = FormattedString(
     'Designed By James Hultquist-Todd\n4 Weights\nDesigned in 2019',
@@ -135,162 +184,49 @@ fs = FormattedString(
     fontSize=captionSize,
     align="center"
     )
-textBox(fs, (0, 140, w, 80))
+textBox(fs, (0, 140, width(), 80))
 
 logo()
-
-#==========================================
-#Page 3
-
-
-newPage(w, h) 
-PageName = fontName
-header()
-
-font(myFontReg, 40)
-fill(0)
-
-t = textBox(ucWords, (margin, margin, marginWidth, marginHeight))
-
-captionText = "English"
-caption(0,760)
-
-
 
 
 #==========================================
 #Page 4
 
 PageName = fontName
-kernGuy(38,ucAWords,(h * 2))
+kernGuy2(proofFontSize,(height() * 2))
 
 PageName = fontName
-kernGuy(38,ucBWords,(h * 2))
+kernGuy(proofFontSize,lcASpacing,(h * 2))
 
 PageName = fontName
-kernGuy(38,ucCWords,(h * 2))
+kernGuy(proofFontSize,lcLSpacing,(h * 2))
 
 PageName = fontName
-kernGuy(38,ucDWords,(h * 2))
+kernGuy(proofFontSize,lcSSpacing,(h * 2))
 
 PageName = fontName
-kernGuy(38,ucEWords,(h * 2))
+kernGuy(proofFontSize,lcTSpacing,(h * 2))
 
 PageName = fontName
-kernGuy(38,ucFWords,(h * 2))
+kernGuy(proofFontSize,lcUSpacing,(h * 2))
 
 PageName = fontName
-kernGuy(38,ucGWords,(h * 2))
+kernGuy(proofFontSize,lcVSpacing,(h * 2))
 
 PageName = fontName
-kernGuy(38,ucHWords,(h * 2))
+kernGuy(proofFontSize,lcWSpacing,(h * 2))
 
 PageName = fontName
-kernGuy(38,ucIWords,(h * 2))
+kernGuy(proofFontSize,lcXSpacing,(h* 2))
 
 PageName = fontName
-kernGuy(38,ucJWords,(h * 2))
+kernGuy(proofFontSize,lcYSpacing,(h * 2))
 
 PageName = fontName
-kernGuy(38,ucKWords,(h * 2))
+kernGuy(proofFontSize,lcZSpacing,(h * 2))
 
 PageName = fontName
-kernGuy(38,ucLWords,(h * 2))
-
-PageName = fontName
-kernGuy(38,ucMWords,(h * 2))
-
-PageName = fontName
-kernGuy(38,ucNWords,(h * 2))
-
-PageName = fontName
-kernGuy(38,ucOWords,(h * 2))
-
-PageName = fontName
-kernGuy(38,ucPWords,(h * 2))
-
-PageName = fontName
-kernGuy(38,ucQWords,(h * 2))
-
-PageName = fontName
-kernGuy(38,ucRWords,(h * 2))
-
-PageName = fontName
-kernGuy(38,ucSWords,(h * 2))
-
-PageName = fontName
-kernGuy(38,ucTWords,(h * 2))
-
-PageName = fontName
-kernGuy(38,ucUWords,(h * 2))
-
-PageName = fontName
-kernGuy(38,ucVWords,(h * 2))
-
-PageName = fontName
-kernGuy(38,ucWWords,(h * 2))
-
-PageName = fontName
-kernGuy(38,ucXWords,(h * 2))
-
-PageName = fontName
-kernGuy(38,ucYWords,(h * 2))
-
-PageName = fontName
-kernGuy(38,ucZWords,(h * 2))
-
-PageName = fontName
-kernGuy(38,lcASpacing,(h * 2))
-
-PageName = fontName
-kernGuy(38,lcLSpacing,(h * 2))
-
-PageName = fontName
-kernGuy(38,lcSSpacing,(h * 2))
-
-PageName = fontName
-kernGuy(38,lcTSpacing,(h * 2))
-
-PageName = fontName
-kernGuy(38,lcUSpacing,(h * 2))
-
-PageName = fontName
-kernGuy(38,lcVSpacing,(h * 2))
-
-PageName = fontName
-kernGuy(38,lcWSpacing,(h * 2))
-
-PageName = fontName
-kernGuy(38,lcXSpacing,(h * 2))
-
-PageName = fontName
-kernGuy(38,lcYSpacing,(h * 2))
-
-PageName = fontName
-kernGuy(38,lcZSpacing,(h * 2))
-
-PageName = fontName
-kernGuy(38,numberWords,(h * 2))
-
-
-
-
-
-#==========================================
-#Page 3
-#while len(udhrEng):
-    #newPage(w, h)
-    #PageName = fontName
-    #header()
-    #logo()
-
-    #font(myFontReg, 20)
-    #fill(0)
-
-    #t = textBox(udhrEng, (0, 0, w-100, w-80))
-
-    #captionText = "English"
-    #caption(0,500)
+kernGuy(proofFontSize,numberWords,(h * 2))
 
 
 
@@ -299,6 +235,6 @@ kernGuy(38,numberWords,(h * 2))
 path = "/Users/jtd/Documents/DeleteStuff/JTD_Proof_%s.pdf" % fontName
 saveImage(path)
 
-# open the animation
+# open the in Safari
 import os
 os.system(f"open -a Safari {path}")
