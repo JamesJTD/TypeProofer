@@ -98,6 +98,7 @@ def kernGuy2(fSize,pageLength):
         t += f"{text}"
         newPage(width(), pageLength)
         header()
+        caption(f"{primaryLetter}", 0,50)
 
         translate(0, height()-margin)
         save()
@@ -113,11 +114,8 @@ def kernGuy2(fSize,pageLength):
                 align="left"
             )
             translate(0, -txtHeight)
-            f = textBox(fs, (margin, (0-(margin / 2)), marginWidth, txtHeight))
-
-            
+            f = textBox(fs, (margin, ((margin / 4)), marginWidth, txtHeight))            
         restore()
-        caption(f"{primaryLetter}", 0,0)
 
 #==========================================
 #Universal Elements For Each Page
