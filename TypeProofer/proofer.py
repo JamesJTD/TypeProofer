@@ -4,6 +4,8 @@ import sys
 import datetime
 import os
 import glob
+from fontTools import ttLib
+
 sys.path.append('/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/')
 
 #This document doesn’t need to be included yet
@@ -14,8 +16,8 @@ from MiscWords import *
 
 #==========================================
 #Document Size and Margin information
-size('Letter')
 
+size('Letter')
 
 margin = 40
 lineGap = -20
@@ -26,40 +28,45 @@ h = height()
 #==========================================
 #Foundry
 
-foundryCopyright = '© JTD, LLC 2019'
+foundryName = 'JTD, LLC'
 
 #==========================================
 #Fonts
 
+#location of the fonts which you want to proof
+fontPath = '/Users/jtd/JTD Type Dropbox/JTD/TypeTools/TypeProofer/prooferFonts/'
+
+#name of the font being proofed
+fontName = 'Elfreth'
+
+#font size for the proofs
+proofFontSize = 36
 
 fontVers = '191001V4'
-fontName = 'Elfreth'
-myFontLight = 'Elfreth%s-Light' % fontVers
-myFontReg = 'Elfreth%s-Regular' % fontVers
-myFontBold = 'Elfreth%s-Bold' % fontVers
-myFontBlack = 'Elfreth%s-Black' % fontVers
-#fontFamily = [myFontLight, myFontReg, myFontBold, myFontBlack]
-
-proofFontSize = 36
+titleFont = 'Elfreth%s-Black' % fontVers
 
 
 captionFont = 'ArrayMonoV1001-Regular'
 captionSize = 9
 
-PageName = fontName
-
 fontFamily = []
 
-for files in glob.glob('/Users/jtd/JTD Type Dropbox/JTD/TypeTools/TypeProofer/prooferFonts/*.otf'):
+for files in glob.glob(f'{fontPath}*.otf'):
     fontFamily.append(files)
     fontFamily.sort()
     print(fontFamily)
 
 
 #==========================================
+#Misc Variables
+
+now = datetime.datetime.now()
+year = now.strftime("%Y")
+
+#==========================================
 #Misc Functions
              
-#Kerning/Spacing Function with uses individual strings for each letter
+#Kerning/Spacing Function with uses individual lists for each letter
 def kernGuy(fSize,letterString,pageLength):
     newPage(width(), pageLength)
     header()
@@ -83,15 +90,15 @@ def kernGuy(fSize,letterString,pageLength):
     restore()
 
 
-#Kerning/Spacing Function Version 2 which uses tuples instead of individual strings
+#Kerning/Spacing Function Version 2 which uses tuples instead of individual lists
 def kernGuy2(fSize,pageLength):
-    t = ''
     for a in ucWords:
         primaryLetter,text = a
+        t = ''
         t += f"{text}"
         newPage(width(), pageLength)
         header()
-        #logo()
+
         translate(0, height()-margin)
         save()
         for fName in fontFamily:
@@ -113,10 +120,9 @@ def kernGuy2(fSize,pageLength):
         caption(f"{primaryLetter}", 0,0)
 
 #==========================================
-#Universal Elements
+#Universal Elements For Each Page
 
 def header():
-    now = datetime.datetime.now()
 
     fs = FormattedString(
         now.strftime("%Y-%m-%d %H:%M"), 
@@ -128,7 +134,7 @@ def header():
     text(fs, (margin, 40))  
     
     fs = FormattedString(
-        PageName, 
+        fontName, 
         font=captionFont,
         fontSize=captionSize,
         fill=0,
@@ -136,6 +142,7 @@ def header():
     )
     textBox(fs, (0,9,width(),40))  
 
+    foundryCopyright = f'© {foundryName} {year}'
     
     fsRight = FormattedString(
         foundryCopyright, 
@@ -146,11 +153,6 @@ def header():
     )
     text(fsRight, (width()-margin-90, 40)) 
     
-def logo():
-    path = '/Users/jtd/Your team Dropbox/JTD/Assets/LogoLibrary/190428/JTD_NoBox.png'
-    logo = ImageObject(path)
-    
-    lW, lH = imageSize(path)
     
 
 def caption(captionText,x,y):
@@ -164,35 +166,23 @@ def caption(captionText,x,y):
     textBox(fs, (x,y,width(),20))
     
 #==========================================
-#Page 1
+#Title Page
 
 PageName = ""
 header()
 
-
- 
 fs = FormattedString(
         fontName, 
-        font=myFontBlack,
+        font=titleFont,
         fontSize=120,
         fill=0,
         align="center"
     )
-textBox(fs, (0, 320, width(), 158))
-
-fs = FormattedString(
-    'Designed By James Hultquist-Todd\n4 Weights\nDesigned in 2019',
-    font=captionFont,
-    fontSize=captionSize,
-    align="center"
-    )
-textBox(fs, (0, 140, width(), 80))
-
-logo()
+textBox(fs, (0, 330, width(), 158))
 
 
 #==========================================
-#Page 4
+#Proofing Pages
 
 PageName = fontName
 kernGuy2(proofFontSize,(height() * 2))
