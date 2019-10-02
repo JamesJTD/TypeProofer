@@ -2,6 +2,8 @@ from drawBot import *
 import random
 import sys
 import datetime
+import os
+import glob
 sys.path.append('/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/')
 
 #This document doesn’t need to be included yet
@@ -28,13 +30,14 @@ foundryCopyright = '© JTD, LLC 2019'
 
 #==========================================
 #Fonts
+
+
 fontVers = '191001V4'
 fontName = 'Elfreth'
 myFontLight = 'Elfreth%s-Light' % fontVers
 myFontReg = 'Elfreth%s-Regular' % fontVers
 myFontBold = 'Elfreth%s-Bold' % fontVers
 myFontBlack = 'Elfreth%s-Black' % fontVers
-
 #fontFamily = [myFontLight, myFontReg, myFontBold, myFontBlack]
 
 proofFontSize = 36
@@ -47,13 +50,10 @@ PageName = fontName
 
 fontFamily = []
 
-import os
-for file in os.listdir('/Users/jtd/JTD Type Dropbox/JTD/TypeTools/TypeProofer/TypeProofer/prooferFonts'):
-    if file.endswith(".otf"):
-        fontFamily += [file]
-        print(file)
-
-#fontFamily = []
+for files in glob.glob('/Users/jtd/JTD Type Dropbox/JTD/TypeTools/TypeProofer/prooferFonts/*.otf'):
+    fontFamily.append(files)
+    fontFamily.sort()
+    print(fontFamily)
 
 
 #==========================================
@@ -169,6 +169,8 @@ def caption(captionText,x,y):
 PageName = ""
 header()
 
+
+ 
 fs = FormattedString(
         fontName, 
         font=myFontBlack,
