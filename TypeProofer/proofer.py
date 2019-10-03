@@ -71,7 +71,6 @@ year = now.strftime("%Y")
 def kernGuy(fSize,letterString,pageLength):
     newPage(width(), pageLength)
     header()
-    #logo()
     translate(0, height()-margin)
     save()
     for fName in fontFamily:
@@ -148,18 +147,16 @@ def kernGuy3(fSize):
 
                     th = textSize(t)[1]
 
-                    f = textOverflow(t, (margin, margin, marginWidth, th))
-
-                    th = (textSize(f)[1] * 10)
                     p = (th * len(fontFamily)) + (margin * 4)
 
-                    if p < height():
+                    print(th)
+                    if p < self.h:
 
                         break
 
                     else:
 
-                        pp.pageLength = p
+                        pp.pageLength += p
 
 
 
@@ -186,6 +183,9 @@ def kernGuy3(fSize):
 
         pp.addText()
 
+        print(pp.pageLength)
+
+
         newPage(width(), pp.pageLength)
         header()
         caption(f"{primaryLetter}", 0,50)
@@ -193,10 +193,8 @@ def kernGuy3(fSize):
         pp.pageLengthMargin = pp.pageLength - (margin * 4)
 
         translate(0, pp.pageLengthMargin)
-
         save()
         pp.pageText()   
-        print(pp.pageLength)  
         restore()
 
 
