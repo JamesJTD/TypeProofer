@@ -17,6 +17,7 @@ from MiscWords import *
 #Document Size and Margin information
 
 size('Letter')
+print(height())
 
 margin = 40
 lineGap = -20
@@ -118,11 +119,95 @@ def kernGuy2(fSize,pageLength):
         restore()
 
 #Kerning/Spacing Function Version 3 which uses tuples instead of individual lists
-def kernGuy3(fSize,pageLength):
+
+def kernGuy3(fSize):
     for a in ucWords:
         primaryLetter,text = a
         t = ''
         t += f"{text}"
+
+        class proofPage:
+
+            def __init__(self):
+                self.h = height()
+                self.pageLength = h
+
+            def addText(self):
+
+                '''This needs work to adjust get the th variable to show up properly
+                
+                Right now, it’s only showing one line of the text without the “ * 10” 
+                added to the varaible'''
+
+                for fName in fontFamily:
+
+
+                    font(fName, fSize)
+
+                    lineHeight(fSize * 1.1)
+
+                    th = textSize(t)[1]
+
+                    f = textOverflow(t, (margin, margin, marginWidth, th))
+
+                    th = (textSize(f)[1] * 10)
+                    p = (th * len(fontFamily)) + (margin * 4)
+
+                    if p < height():
+
+                        break
+
+                    else:
+
+                        pp.pageLength = p
+
+
+
+                    return(pp.pageLength)
+
+            def pageText(self):
+                for fName in fontFamily:
+
+                    th = pp.pageLengthMargin / len(fontFamily)
+                    fs = FormattedString(
+                        t,
+                        font=fName,
+                        fontSize=fSize,
+                        lineHeight=fSize * 1.1,
+                        fill=0,
+                        align="left"
+                    )
+                    translate(0, -th)
+                    f = textBox(fs, (margin, ((margin * 2)), marginWidth, th))
+
+
+
+        pp = proofPage()
+
+        pp.addText()
+
+        newPage(width(), pp.pageLength)
+        header()
+        caption(f"{primaryLetter}", 0,50)
+
+        pp.pageLengthMargin = pp.pageLength - (margin * 4)
+
+        translate(0, pp.pageLengthMargin)
+
+        save()
+        pp.pageText()   
+        print(pp.pageLength)  
+        restore()
+
+
+
+
+def kernGuy4(fSize,pageLength):
+    for a in ucWords:
+        primaryLetter,text = a
+        t = ''
+        t += f"{text}"
+
 
 
         def pageText():
@@ -138,7 +223,9 @@ def kernGuy3(fSize,pageLength):
                     align="left"
                 )
                 translate(0, -txtHeight)
-                f = textBox(fs, (margin, ((margin / 4)), marginWidth, txtHeight))     
+                f = textBox(fs, (margin, ((margin / 4)), marginWidth, txtHeight))  
+                
+                   
 
 
         
@@ -150,7 +237,6 @@ def kernGuy3(fSize,pageLength):
         save()
         pageText()     
         restore()
-
 #==========================================
 #Universal Elements For Each Page
 
@@ -159,7 +245,7 @@ fontFamily = []
 for files in glob.glob(f'{fontPath}*.otf'):
     fontFamily.append(files)
     fontFamily.sort()
-    print(fontFamily)
+    #print(fontFamily)
 
 
 def header():
@@ -225,7 +311,7 @@ textBox(fs, (0, 330, width(), 158))
 #Proofing Pages
 
 PageName = fontName
-kernGuy3(proofFontSize,(height() * 2))
+kernGuy3(proofFontSize)
 
 PageName = fontName
 kernGuy(proofFontSize,lcASpacing,(h * 2))
