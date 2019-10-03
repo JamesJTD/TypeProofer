@@ -1,5 +1,4 @@
 from drawBot import *
-import random
 import sys
 import datetime
 import os
@@ -45,16 +44,17 @@ proofFontSize = 36
 fontVers = '191001V4'
 titleFont = 'Elfreth%s-Black' % fontVers
 
-
+#caption font & font size
 captionFont = 'ArrayMonoV1001-Regular'
 captionSize = 9
 
-fontFamily = []
+#==========================================
+#Save Location
 
-for files in glob.glob(f'{fontPath}*.otf'):
-    fontFamily.append(files)
-    fontFamily.sort()
-    print(fontFamily)
+savePath = "/Users/jtd/Documents/DeleteStuff/"
+
+
+#######NOTHING BELOW HERE NEEDS TO BE CHANGED##########
 
 
 #==========================================
@@ -85,7 +85,7 @@ def kernGuy(fSize,letterString,pageLength):
             align="left"
         )
         translate(0, -txtHeight)
-        t = textBox(fs, (margin, (0-(margin / 2)), marginWidth, txtHeight))
+        f = textBox(fs, (margin, (0-(margin / 2)), marginWidth, txtHeight))
 
     restore()
 
@@ -117,8 +117,50 @@ def kernGuy2(fSize,pageLength):
             f = textBox(fs, (margin, ((margin / 4)), marginWidth, txtHeight))            
         restore()
 
+#Kerning/Spacing Function Version 3 which uses tuples instead of individual lists
+def kernGuy3(fSize,pageLength):
+    for a in ucWords:
+        primaryLetter,text = a
+        t = ''
+        t += f"{text}"
+
+
+        def pageText():
+            for fName in fontFamily:
+
+                txtHeight = (marginHeight * 2) / len(fontFamily)
+                fs = FormattedString(
+                    t,
+                    font=fName,
+                    fontSize=fSize,
+                    lineHeight=fSize * 1.1,
+                    fill=0,
+                    align="left"
+                )
+                translate(0, -txtHeight)
+                f = textBox(fs, (margin, ((margin / 4)), marginWidth, txtHeight))     
+
+
+        
+        newPage(width(), pageLength)
+        header()
+        caption(f"{primaryLetter}", 0,50)
+
+        translate(0, height()-margin)
+        save()
+        pageText()     
+        restore()
+
 #==========================================
 #Universal Elements For Each Page
+
+fontFamily = []
+
+for files in glob.glob(f'{fontPath}*.otf'):
+    fontFamily.append(files)
+    fontFamily.sort()
+    print(fontFamily)
+
 
 def header():
 
@@ -183,7 +225,7 @@ textBox(fs, (0, 330, width(), 158))
 #Proofing Pages
 
 PageName = fontName
-kernGuy2(proofFontSize,(height() * 2))
+kernGuy3(proofFontSize,(height() * 2))
 
 PageName = fontName
 kernGuy(proofFontSize,lcASpacing,(h * 2))
@@ -222,9 +264,8 @@ kernGuy(proofFontSize,numberWords,(h * 2))
 
 #==========================================
 #Export
-path = "/Users/jtd/Documents/DeleteStuff/JTD_Proof_%s.pdf" % fontName
+path = f"{savePath}Proof_{fontName}.pdf"
 saveImage(path)
 
 # open the in Safari
-import os
 os.system(f"open -a Safari {path}")
