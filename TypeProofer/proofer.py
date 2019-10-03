@@ -63,6 +63,7 @@ savePath = "/Users/jtd/Documents/DeleteStuff/"
 
 now = datetime.datetime.now()
 year = now.strftime("%Y")
+w,h = width(), height()
 
 #==========================================
 #Misc Functions
@@ -127,29 +128,32 @@ def kernGuy3(fSize):
 
         class proofPage:
 
-            def __init__(self):
-                self.h = height()
+            def __init__(self, h):
+                self.h = h
                 self.pageLength = h
 
             def addText(self):
 
                 '''This needs work to adjust get the th variable to show up properly
                 
-                Right now, it’s only showing one line of the text without the “ * 10” 
-                added to the varaible'''
+                textSize(t)[1] only shows the height for one line, unless they are 
+                explicitly declared in the MiscWords.py file as multi-line. Therefore, 
+                we are using the width of the line a dividing it to get our usable 
+                line height.'''
 
                 for fName in fontFamily:
 
-
+                    
                     font(fName, fSize)
 
                     lineHeight(fSize * 1.1)
 
-                    th = textSize(t)[1]
 
-                    p = (th * len(fontFamily)) + (margin * 4)
+                    tw, th = textSize(t)
 
-                    print(th)
+                    p = tw / 2.4
+
+                    print(tw)
                     if p < self.h:
 
                         break
@@ -158,11 +162,12 @@ def kernGuy3(fSize):
 
                         pp.pageLength += p
 
-
-
                     return(pp.pageLength)
 
             def pageText(self):
+
+                translate(0, pp.pageLengthMargin)
+                save()
                 for fName in fontFamily:
 
                     th = pp.pageLengthMargin / len(fontFamily)
@@ -176,26 +181,30 @@ def kernGuy3(fSize):
                     )
                     translate(0, -th)
                     f = textBox(fs, (margin, ((margin * 2)), marginWidth, th))
+                restore()
+
+
+            def makePage(self):
 
 
 
-        pp = proofPage()
+                pp.addText()
 
-        pp.addText()
-
-        print(pp.pageLength)
+                print(pp.pageLength)
 
 
-        newPage(width(), pp.pageLength)
-        header()
-        caption(f"{primaryLetter}", 0,50)
+                newPage(width(), pp.pageLength)
+                header()
+                caption(f"{primaryLetter}", 0,50)
 
-        pp.pageLengthMargin = pp.pageLength - (margin * 4)
+                pp.pageLengthMargin = pp.pageLength - (margin * 4)
 
-        translate(0, pp.pageLengthMargin)
-        save()
-        pp.pageText()   
-        restore()
+                pp.pageText()   
+
+
+        pp = proofPage(h)
+
+        pp.makePage()
 
 
 

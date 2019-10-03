@@ -49,7 +49,7 @@ numberWords = "0102030405060708090 101121314115161718191 20212232425262728292 30
 
 
 ucWords =  [
-    ("A", "Aachen Abbreviate Accord Admonished Aether Afternoon Aggressive Ahmed Aimless Ajmer Akimbo Almond Amomum Anatolian Aortography Apple Aquariads Argonauts Astute Atingle Audible Avocation Awoken Axilliary Ayurvedic Azimuth"),
+    ("A", """Aachen Abbreviate Accord Admonished Aether Afternoon Aggressive Ahmed Aimless Ajmer Akimbo Almond Amomum Anatolian Aortography Apple Aquariads Argonauts Astute Atingle Audible Avocation Awoken Axilliary Ayurvedic Azimuth"""),
     ("B", "Bambino Bb Bc Bd Beef Bfoi Bg Bh Billy Bjork Bk Bloop Bm Bn Bopper Bp Bq Bruce Bsuva Btapitewass Bubble Bvom Bwough Bx Byob Bzoummar"),
     ("C", "California Cb Cc Cd Cello Cfengine Cg Ch Cindy Cj Ck Cloudless Cm Cn Copper Cp Cq Cr Cs Ct Cu Cv Cw Cx Cynwyd Czarism"),
     ("D", "Dampen Db Dc Dd Department Df Dg Dh Di Dj Dk Dl Dm Dn Do Dp Dq Dragon Ds Dt Dummy Dv Dw Dx Dynamics Dzerzhinsk"),
