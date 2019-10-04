@@ -3,7 +3,7 @@ import sys
 import datetime
 import os
 import glob
-from fontTools import ttLib
+from fontTools.ttLib import TTFont
 
 sys.path.append('/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/')
 
@@ -17,7 +17,6 @@ from MiscWords import *
 #Document Size and Margin information
 
 size('Letter')
-print(height())
 
 margin = 40
 lineGap = -20
@@ -37,7 +36,7 @@ foundryName = 'JTD, LLC'
 fontPath = '/Users/jtd/JTD Type Dropbox/JTD/TypeTools/TypeProofer/prooferFonts/'
 
 #name of the font being proofed
-fontName = 'Elfreth'
+#fontName = 'Elfreth'
 
 #font size for the proofs
 proofFontSize = 36
@@ -114,11 +113,13 @@ def kernGuy2(fSize,pageLength):
                 fill=0,
                 align="left"
             )
-            translate(0, -txtHeight)
+            translate(0, - txtHeight)
             f = textBox(fs, (margin, ((margin / 4)), marginWidth, txtHeight))            
         restore()
 
-#Kerning/Spacing Function Version 3 which uses tuples instead of individual lists
+'''Kerning/Spacing Function Version 3 which uses tuples instead of individual lists
+
+Creates a page where the length of the page is based on the length of text'''
 
 def kernGuy3(fSize):
     for a in ucWords:
@@ -145,22 +146,24 @@ def kernGuy3(fSize):
 
                     
                     font(fName, fSize)
-
                     lineHeight(fSize * 1.1)
 
 
                     tw, th = textSize(t)
 
-                    p = tw / 2.4
+                    #tw += 50
+
+                    pp.p = (tw / 2.4) + (fSize* 2)
 
                     print(tw)
-                    if p < self.h:
 
+                    pp.p += margin * len(fontFamily)
+
+                    if pp.p < self.h:
                         break
 
                     else:
-
-                        pp.pageLength += p
+                        pp.pageLength = pp.p
 
                     return(pp.pageLength)
 
@@ -169,6 +172,10 @@ def kernGuy3(fSize):
                 translate(0, pp.pageLengthMargin)
                 save()
                 for fName in fontFamily:
+
+                    pp.getName(fName)
+
+                    caption(f"{pp.weight}", 0,50)
 
                     th = pp.pageLengthMargin / len(fontFamily)
                     fs = FormattedString(
@@ -180,9 +187,27 @@ def kernGuy3(fSize):
                         align="left"
                     )
                     translate(0, -th)
-                    f = textBox(fs, (margin, ((margin * 2)), marginWidth, th))
+
+                    list
+                    f = textBox(fs, (margin, margin, marginWidth, th))
+
+                    
+
                 restore()
 
+
+            def getName(self,fName):
+
+                tt = TTFont(fName)
+
+                # nameID: https://docs.microsoft.com/en-us/typography/opentype/spec/name#name-ids
+                # platformID (1 or 3)
+                # platEncID (0 or 1)
+                # langID (0 or 0x409)
+
+                pp.weight = tt["name"].getName(2, 3, 1, 0x409)
+                print(pp.weight)
+                return(pp.weight)
 
             def makePage(self):
 
@@ -199,60 +224,42 @@ def kernGuy3(fSize):
 
                 pp.pageLengthMargin = pp.pageLength - (margin * 4)
 
-                pp.pageText()   
+                pp.pageText()
+
+
+   
 
 
         pp = proofPage(h)
 
         pp.makePage()
 
-
-
-
-def kernGuy4(fSize,pageLength):
-    for a in ucWords:
-        primaryLetter,text = a
-        t = ''
-        t += f"{text}"
-
-
-
-        def pageText():
-            for fName in fontFamily:
-
-                txtHeight = (marginHeight * 2) / len(fontFamily)
-                fs = FormattedString(
-                    t,
-                    font=fName,
-                    fontSize=fSize,
-                    lineHeight=fSize * 1.1,
-                    fill=0,
-                    align="left"
-                )
-                translate(0, -txtHeight)
-                f = textBox(fs, (margin, ((margin / 4)), marginWidth, txtHeight))  
-                
-                   
-
-
-        
-        newPage(width(), pageLength)
-        header()
-        caption(f"{primaryLetter}", 0,50)
-
-        translate(0, height()-margin)
-        save()
-        pageText()     
-        restore()
 #==========================================
 #Universal Elements For Each Page
 
+
 fontFamily = []
 
+
+#Get the font from the specified folder and prep it
 for files in glob.glob(f'{fontPath}*.otf'):
     fontFamily.append(files)
     fontFamily.sort()
     #print(fontFamily)
+
+def name():
+    for fName in fontFamily:
+        tt = TTFont(fName)
+        fn = tt["name"].getName(16, 3, 1, 0x409)
+
+        fn = f"{fn}"
+        return(fn)
+
+fontName = name()
+
+
+print(fontName)
+
 
 
 def header():
@@ -311,7 +318,7 @@ fs = FormattedString(
         fill=0,
         align="center"
     )
-textBox(fs, (0, 330, width(), 158))
+textBox(fs, (0, 340, width(), 158))
 
 
 #==========================================
