@@ -1,29 +1,3 @@
-ucAWords = "Aachen Abbreviate Accord Admonished Aether Afternoon Aggressive Ahmed Aimless Ajmer Akimbo Almond Amomum Anatolian Aortography Apple Aquariads Argonauts Astute Atingle Audible Avocation Awoken Axilliary Ayurvedic Azimuth"
-ucBWords = "Bambino Bb Bc Bd Beef Bfoi Bg Bh Billy Bjork Bk Bloop Bm Bn Bopper Bp Bq Bruce Bsuva Btapitewass Bubble Bvom Bwough Bx Byob Bzoummar"
-ucCWords = "California Cb Cc Cd Cello Cfengine Cg Ch Cindy Cj Ck Cloudless Cm Cn Copper Cp Cq Cr Cs Ct Cu Cv Cw Cx Cynwyd Czarism"
-ucDWords = "Dampen Db Dc Dd Department Df Dg Dh Di Dj Dk Dl Dm Dn Do Dp Dq Dragon Ds Dt Dummy Dv Dw Dx Dynamics Dzerzhinsk"
-ucEWords = "Eames Eb Ec Ed Ee Ef Egoism Eh Ei Ej Ek El Em Engine Eo Ep Equestrian Er Es Et European Everest Ew Ex Eyesore Ez"
-ucFWords = "Family Fb Fc Fd Fennel Ff Fg Fh Finals Fj Fk Flouride Fm Fn Fondness Fp Fq Fr Fsoma Ft Funny Fv Fw Fx Fyodor Fz"
-ucGWords = "Gameboy Gb Gc Gd Ge Gf Gg Ghosts Gigabytes Gj Gk Glerups Gm Gn Google Gp Gq Greed Gs Gt Gugenheim Gv Gwiniad Gx Gy Gz"
-ucHWords = "Happy Hb Hc Hd He Hf Hg Hh Hi Hj Hk Hl Hm Hn Honey Hp Hq Hryvnia Hsiang Ht Humanity Hv Hw Hx Hyperbole Hz"
-ucIWords = "Iambic Ib Icarus Ideation Ie If Ig Ih Ii Ij Ik Illiad Im Ingots Iodine Ip Iq Iriquois Is It Iubeam Iv Iw Ix Iyengar Iz"
-ucJWords = "Jamboree Jb Jc Jd Jenny Jf Jgehds Jh Jingles Jj Jk Jl Jm Jn Joplin Jp Jq Jr Jscript Jt Judgement Jv Jw Jx Jylland Jzunami"
-ucKWords = "Kangol Kb Kc Kd Kenny Kf Kg Kh Kind Kj Kk Kl Km Knock Kong Krook Ksilebo Ktinga Kunalibob Kwoddledonk Kxoe Kylo"
-ucLWords = "Lambda Lb Lc Ld Lemmy Lf Lg Lh Lilly Lj Lk Llafranc Lm Ln Loudness Lp Lq Lrnod Lshijpm Lt Luger Lv Lw Lx Lyon Lz"
-ucMWords = "Manilla Mb McMaster Md Me Mf Mg Mh Miners Mj Mk Ml Mm Mn Monetary Mp Mq Mr Ms Mt Mu Mv Mw Mx My Mz"
-ucNWords = "Nanny Nb Nc Nd Ne Nfernelson Ngultrum Nh Ninja Nj Nk Nl Nm Nn No Np Nq Nr Ns Nt Number Nv Nw Nx Nymph Nz"
-ucOWords = "Oa Ob Octagon Od Oe Oftentimes Oglethorpe Oh Oi Oj Ok Ol Om On Oo Op Oq Or Os Ot Ou Ov Ow Ox Oy Oz"
-ucPWords = "Padres Pb Pc Pd Penny Pfiefer Pg Phone Pineapple Pj Pk Plowshare Pm Pn Poppers Pp Pq Prenatal Ps Pt Pu Pv Pw Px Py Pz"
-ucQWords = "Qantas Qb Qc Qd Qepic Qf Qg Qh Qi Qj Qk Qleiat Qm Qn Qo Qplaze Qq Qr Qs Qt Qu Qv Qw Qx Qy Qz"
-ucRWords = "Rainbow Rb Rc Rd Resourceful Rf Rguyism Rh Riddler Rj Rk Rl Rm Rn Romantic Rp Rq Rr Rs Rtasya Rubbermaid Rv Rw Rx Ry Rz"
-ucSWords = "Sally Sb Sc Sd Se Sf Sg Sh Si Sj Sk Sloop Smooth Sn So Speakeasy Square Sr Ss St Sunny Sv Sw Sx Sy Sz"
-ucTWords = "Tallahassi Tb Tc Td Te Tf Tgifriday Th Timmy Tjamuaha Tk Tl Tm Tn Topographic Tp Tq Tr Tsarina Tt Tuple Tvone Twins Tx Typography Tzentales"
-ucUWords = "Uakari Ub Uc Udometer Uefa Ufologist Ugrian Uhuru Uintatheriidae Uj Uk Ulcerogenic Um Un Uo Update Uq Ur Us Utrecht Uu Uv Uw Ux Uy Uz"
-ucVWords = "Vanilla Vb Vc Vd Ve Vfoc Vg Vh Village Vj Vk Vl Vm Vn Vocoder Vp Vq Vr Vs Vt Vu Vv Vw Vx Vy Vz"
-ucWWords = "Wandering Wb Wc Wd We Wf Wg Whammy Willow Wj Wk Wl Wm Wn Woman Wp Wq Wr Ws Wt Wu Wv Ww Wx Wykehamist Wz"
-ucXWords = "Xanadu Xb Xc Xd Xe Xf Xghajra Xh Xiphius Xj Xk Xl Xm Xn Xochiquetzal Xp Xq Xrays Xs Xterra Xu Xv Xw Xx Xy Xz"
-ucYWords = "Yammer Yb Yc Yd Yellow Yf Yg Yh Yi Yj Yk Ylem Ym Ynambu Yonder Yp Yq Yr Yspaddaden Ytambey Yu Yv Yw Yx Yy Yz"
-ucZWords = "Zambia Zb Zc Zd Zepplin Zf Zg Zhenjiang Zipper Zj Zk Zl Zm Zn Zooligical Zp Zq Zr Zsigmondy Zt Zulu Zv Zw Zx Zy Zz"
 
 
 lcASpacing = "aaaann baabnn caacnn daadnn eaaenn faafnn gaagnn haahnn iaainn jaajnn kaaknn laalnn maamnn naannn oaaonn paapnn qaaqnn raarnn saasnn taatnn uaaunn vaavnn waawnn xaaxnn yaaynn zaaznn"
@@ -50,30 +24,34 @@ numberWords = "0102030405060708090 101121314115161718191 20212232425262728292 30
 
 ucWords =  [
     ("Uppercase A", "Aachen Abbreviate Accord Admonished Aether Afternoon Aggressive Ahmed Aimless Ajmer Akimbo Almond Amomum Anatolian Aortography Apple Aquariads Argonauts Astute Atingle Audible Avocation Awoken Axilliary Ayurvedic Azimuth"),
-    ("Uppercase B", "Bambino Bb Bc Bdellium Beef Bfoi Bgheidid Bhubaneswar Billy Bjork Bk Bloop Bm Bnai Bopper Bp Bq Bruce Bsuva Btapitewass Bubble Bvom Bwough Bx Byob Bzoummar"),
-    ("Uppercase C", "California Cboe Cc Cd Cello Cfengine Cgforum Ch Cindy Cjona Ck Cloudless Cm Cn Copper Cp Cq Cronyism Cs Ctenophore Cu Cvahec Cw Cxprocess Cynwyd Czarism"),
-    ("Uppercase D", "Dampen Db Dc Dd Department Df Dgebuadze Dh Diddly Dj Dk Dlaxed Dm Dnipropetrovsk Donny Dp Dq Dragon Dslam Dt Dummy Dv Dw Dx Dynamics Dzerzhinsk"),
-    ("Uppercase E", "Eames Eb Ec Ed Ee Ef Egoism Eh Ei Ej Ek El Em Engine Eo Ep Equestrian Er Es Eternities European Everest Ew Ex Eyesore Ezekiel"),
-    ("Uppercase F", "Family Fb Fc Fd Fennel Ff Fg Fhergently Finals Fjallraven Fk Flouride Fm Fn Fondness Fp Fq Fr Fsoma Ft Funny Fv Fw Fx Fyodor Fzoul"),
-    ("Uppercase G", "Gameboy Gb Gc Gd Ge Gf Gg Ghosts Gigabytes Gj Gk Glerups Gm Gn Google Gp Gq Greed Gs Gt Gugenheim Gv Gwiniad Gx Gy Gz"),
-    ("Uppercase H", "Happy Hb Hc Hd Helicopter Hf Hg Hh Hi Hj Hk Hl Hm Hn Honey Hp Hq Hryvnia Hsiang Ht Humanity Hv Hw Hx Hyperbole Hz"),
-    ("Uppercase I", "Iambic Ib Icarus Ideation Ie Ifosfamide Ig Ih Ii Ij Ik Illiad Im Ingots Iodine Ip Iq Iriquois Is It Iubeam Iv Iw Ix Iyengar Iz"),
-    ("Uppercase J", "Jamboree Jb Jc Jd Jenny Jf Jgehds Jh Jingles Jj Jk Jl Jm Jn Joplin Jp Jq Jr Jscript Jt Judgement Jv Jw Jx Jylland Jzunami"),
-    ("Uppercase K", "Kangol Kb Kc Kd Kenny Kf Kg Kh Kind Kj Kk Kl Km Knock Kong Krook Ksilebo Ktinga Kunalibob Kwoddledonk Kxoe Kylo"),
-    ("Uppercase L", "Lambda Lb Lc Ld Lemmy Lf Lg Lh Lilly Lj Lk Llafranc Lm Ln Loudness Lp Lq Lrnod Lshijpm Lt Luger Lv Lw Lx Lyon Lz"),
-    ("Uppercase M", "Manilla Mb McMaster Md Me Mf Mg Mh Miners Mj Mk Ml Mm Mn Monetary Mp Mq Mrochek Ms Mtapaiassaurus Mu Mv Mw Mx Myopia Mz"),
-    ("Uppercase N", "Nanny Nb Nc Nd Ne Nfernelson Ngultrum Nh Ninja Nj Nk Nl Nm Nn No Np Nq Nr Ns Nt Number Nv Nwoame Nxehtë Nymph Nzinga"),
-    ("Uppercase O", "Oarsmanship Ob Octagon Od Oe Oftentimes Oglethorpe Oh Oi Oj Ok Ol Om On Oo Opportunity Oq Or Os Otmar Ou Ovoidal Ow Ox Oy Oz"),
-    ("Uppercase P", "Padres Pb Pc Pd Penny Pfiefer Pg Phone Pineapple Pj Pk Plowshare Pm Pn Poppers Pp Pq Prenatal Ps Ptolemy Pu Pv Pw Px Py Pz"),
-    ("Uppercase Q", "Qantas Qb Qc Qd Qepic Qf Qg Qh Qinhuangdao Qj Qk Qleiat Qm Qn Qo Qplaze Qq Qr Qs Qt Quintessential Qv Qw Qx Qy Qz"),
-    ("Uppercase R", "Rainbow Rb Rc Rd Resourceful Rf Rguyism Rh Riddler Rj Rk Rl Rm Rn Romantic Rp Rq Rr Rs Rtasya Rubbermaid Rv Rw Rx Ry Rz"),
-    ("Uppercase S", "Sally Sb Sc Sd Se Sf Sg Sh Silly Sj Sk Sloop Smooth Sn So Speakeasy Square Sr Ss St Sunny Svengali Sw Sx Sy Sz"),
-    ("Uppercase T", "Tallahassi Tb Tc Td Te Tf Tgifriday Thursday Timmy Tjamuaha Tk Tloquenahuaque Tm Tn Topographic Tp Tq Tr Tsarina Tt Tuple Tvone Twins Tx Typography Tzentales"),
-    ("Uppercase U", "Uakari Ub Uc Udometer Uefa Ufologist Ugrian Uhuru Uintatheriidae Uj Uk Ulcerogenic Um Un Uo Update Uq Urologist Us Utrecht Uu Uv Uw Ux Uy Uz"),
-    ("Uppercase V", "Vanilla Vb Vc Vd Ve Vfoc Vg Vh Village Vjerojatnost Vk Vlogger Vm Vn Vocoder Vp Vq Vr Vs Vtacnik Vu Vv Vw Vx Vy Vz"),
-    ("Uppercase W", "Wandering Wb Wc Wd We Wf Wg Whammy Willow Wj Wk Wl Wm Wnepssa Woman Wp Wq Wrenchingly Ws Wt Wu Wv Ww Wx Wykehamist Wz"),
-    ("Uppercase X", "Xanadu Xb Xc Xd Xe Xf Xghajra Xh Xiphius Xj Xk Xl Xm Xn Xochiquetzal Xp Xq Xrays Xs Xterra Xu Xv Xw Xx Xy Xz"),
-    ("Uppercase Y", "Yammer Yb Yc Yd Yellow Yf Yg Yh Yi Yj Yk Ylem Ym Ynambu Yonder Yp Yq Yr Yspaddaden Ytambey Yu Yv Yw Yx Yy Yz"),
-    ("Uppercase Z", "Zambia Zb Zc Zd Zepplin Zf Zg Zhenjiang Zipper Zj Zk Zl Zm Zn Zooligical Zp Zq Zr Zsigmondy Zt Zulu Zv Zw Zx Zy Zz")
+    ("Uppercase B", "Bambino Bb Bcereus Bdellium Beef Bfoi Bgheidid Bhubaneswar Billy Bjork Bk Bloop Bm Bnai Bopper Bpupki Bqbitadoyh Bruce Bsuva Btapitewass Bubble Bvom Bwough Bx Byob Bzoummar"),
+    ("Uppercase C", "California Cboe Ccehip Cdiphtheriae Cello Cfengine Cgforum Challenge Cindy Cjona Ck Cloudless Cm Cn Copper Cp Cqfterc Cronyism Cs Ctenophore Cu Cvahec Cwanman Cxprocess Cynwyd Czarism"),
+    ("Uppercase D", "Dampen Dbaaknigewin Dc Dd Department Df Dgebuadze Dhodhekanisos Diddly Djiboutian Dkosopedia Dlaxed Dmitri Dnipropetrovsk Donny Dp Dquasiavquasie Dragon Dslam Dt Dummy Dv Dw Dx Dynamics Dzerzhinsk"),
+    ("Uppercase E", "Eames Ebullioscope Echinochloa Education Eeriness Effusion Egoism Eh Einsteinian Ejection Ekaterinodar Elumbated Em Engine Eolotropic Ep Equestrian Er Es Eternities European Everest Ew Ex Eyesore Ezekiel"),
+    ("Uppercase F", "Family Fbstatouriaphile Fc Fd Fennel Ffarquhar Fg Fhergently Finals Fjallraven Fk Flouride Fm Fn Fondness Fp Fq Fringilla Fsoma Fthalide Funny Fv Fw Fx Fyodor Fzoul"),
+    ("Uppercase G", "Gameboy Gbadolite Gc Gd Ge Gf Ggantija Ghosts Gigabytes Gj Gk Glerups Gm Gn Google Gp Gq Greed Gsankara Gtpases Gugenheim Gv Gwiniad Gx Gymnocarpium Gzhatsk"),
+    ("Uppercase H", "Happy Hbrugchu Hc Hd Helicopter Hf Hg Hh Hinterlands Hj Hk Hl Hm Hn Honey Hp Hq Hryvnia Hsiang Ht Humanity Hv Hw Hx Hyperbole Hz"),
+    ("Uppercase I", "Iambic Ibility Icarus Ideation Ie Ifosfamide Ignominies Ihokudos Ii Ij Ik Illiad Imbedding Ingots Iodine Ip Iquitos Iriquois Is It Iubeam Iv Iw Ix Iyengar Iz"),
+    ("Uppercase J", "Jamboree Jb Jc Jd Jenny Jfugue Jgehds Jhelum Jingles Jj Jk Jlynne Jm Jnanadeva Joplin Jp Jq Jr Jscript Jt Judgement Jv Jw Jx Jylland Jzunami"),
+    ("Uppercase K", "Kangol Kb Kc Kd Kenny Kf Kgaligadi Khoikhoin Kind Kjenndalsbreen Kk Kleptomania Km Knock Kong Krook Ksilebo Ktinga Kunalibob Kwoddledonk Kxoe Kylo"),
+    ("Uppercase L", "Lambda Lbusram Lc Ld Lemmy Lf Lg Lh Lilly Lj Lk Llafranc Lm Lncrna Loudness Lp Lq Lrnod Lshijpm Lt Luger Lv Lw Lx Lyon Lz"),
+    ("Uppercase M", "Manilla Mbundu McMaster Md Me Mf Mg Mhainamtsi Miners Mjolnir Mk Mlle Mm Mn Monetary Mp Mq Mrochek Ms Mtapaiassaurus Mu Mv Mw Mx Myopia Mzilikazi"),
+    ("Uppercase N", "Nanny Nbidextrous Nc Nd Ne Nfernelson Ngultrum Nh Ninja Nj Nk Nl Nm Nn No Np Nq Nr Ns Nt Number Nv Nwoame Nxehtë Nymph Nzinga"),
+    ("Uppercase O", "Oarsmanship Obdormition Octagon Od Oe Oftentimes Oglethorpe Ohmmeter Oidaematophorus Ojerholmed Okinawa Ol Om On Oo Opportunity Oq Or Os Otmar Ou Ovoidal Ow Ox Oy Oz"),
+    ("Uppercase P", "Padres Pb Pc Pd Penny Pfiefer Pgnunnithan Phone Pineapple Pjevanija Pk Plowshare Pm Pn Poppers Pp Pq Prenatal Pseudoblepsis Ptolemy Pu Pv Pw Px Py Pz"),
+    ("Uppercase Q", "Qantas Qbinomial Qc Qd Qepic Qf Qg Qh Qinhuangdao Qj Qk Qleiat Qm Qn Qo Qplaze Qq Qrupweio Qstar Qtoctave Quintessential Qv Qw Qx Qy Qzzylaghash"),
+    ("Uppercase R", "Rainbow Rbalakrishna Rciroan Rd Resourceful Rf Rguyism Rh Riddler Rj Rk Rl Rm Rn Romantic Rp Rq Rr Rs Rtasya Rubbermaid Rvarizzi Rw Rx Ry Rz"),
+    ("Uppercase S", "Sally Sbadigliato Sc Sd Se Sfumato Sgraffito Sh Silly Sjaelland Sk Sloop Smooth Sn So Speakeasy Square Sr Ss St Sunny Svengali Sw Sx Sy Sz"),
+    ("Uppercase T", "Tallahassi Tbilisi Tc Tdamodaran Te Tfmtkaytfo Tgifriday Thursday Timmy Tjamuaha Tk Tloquenahuaque Tm Tn Topographic Tp Tq Tr Tsarina Tt Tuple Tvone Twins Tx Typography Tzentales"),
+    ("Uppercase U", "Uakari Ubiquity Uc Udometer Uefa Ufologist Ugrian Uhuru Uintatheriidae Uj Uk Ulcerogenic Um Un Uo Update Uq Urologist Us Utrecht Uu Uv Uw Ux Uy Uz"),
+    ("Uppercase V", "Vanilla Vbanetwork Vc Vd Ve Vfoc Vg Vh Village Vjerojatnost Vk Vlogger Vm Vn Vocoder Vp Vq Vraisemblance Vsevolod Vtacnik Vu Vv Vw Vx Vy Vz"),
+    ("Uppercase W", "Wandering Wbeimar Wc Wd We Wf Wg Whammy Willow Wj Wk Wl Wm Wnepssa Woman Wp Wq Wrenchingly Ws Wt Wunderkind Wv Ww Wx Wykehamist Wzerozerot"),
+    ("Uppercase X", "Xanadu Xbaquiyalo Xc Xd Xenogenic Xfinity Xghajra Xhosas Xiphius Xj Xk Xlibris Xm Xn Xochiquetzal Xp Xq Xrays Xs Xterra Xuzhou Xv Xw Xx Xylomelum Xz"),
+    ("Uppercase Y", "Yammer Ybeltje Yc Yd Yellow Yf Yggdrasil Yhdeksittä Yi Yjpam Yksipuolistui Ylem Ym Ynambu Yonder Yp Yquelon Yreina Yspaddaden Ytambey Yugoslavian Yvonne Yw Yxtololotli Yy Yzerfontein"),
+    ("Uppercase Z", "Zambia Zbigniew Zc Zd Zepplin Zf Zg Zhenjiang Zipper Zjednoczone Zk Zlatoust Zm Zn Zooligical Zp Zq Zr Zsigmondy Ztopoření Zulu Zv Zw Zx Zy Zz"),
+
+    ("Misc", "bílstjóri d'oïl etelälounas Tähki Ztopoření zwinglïaidd"),
+
+    ("Quotes", "“acacia” “bomb” “classic” “deed” “engine” “fluff” “gang” “health” “indri” “jayraj” “kick” “level” “medium” “noon” “oreo” “pump” “qirayuq” “rear” “says” “tent” “urdu” “vaclav” “window” “xerox” “yummy” “zechez”")
 
 ]

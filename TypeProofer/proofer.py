@@ -205,9 +205,19 @@ def kernGuy3(fSize):
                 # platEncID (0 or 1)
                 # langID (0 or 0x409)
 
-                pp.weight = tt["name"].getName(2, 3, 1, 0x409)
-                print(pp.weight)
-                return(pp.weight)
+                pp.weight = tt["name"].getName(17, 3, 1, 0x409)
+
+                #Attempt to remove "None" from generated PDF. Not working yet
+                if pp.weight == "":
+
+                    pp.weightName = tt["name"].getName(2, 3, 1, 0x409)
+
+                else:
+
+                    pp.weightName = pp.weight
+
+                print(pp.weightName)
+                return(pp.weightName)
 
             def makePage(self):
 
