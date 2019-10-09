@@ -4,6 +4,7 @@ import datetime
 import os
 import glob
 from fontTools.ttLib import TTFont
+from vanilla.dialogs import *
 
 sys.path.append('/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/')
 
@@ -33,7 +34,8 @@ foundryName = 'JTD, LLC'
 #Fonts
 
 #location of the fonts which you want to proof
-fontPath = '/Users/jtd/JTD Type Dropbox/JTD/TypeTools/TypeProofer/prooferFonts/'
+fontPath = getFile('Choose you fonts',None,None,None,True)
+fontFamily = fontPath
 
 #name of the font being proofed
 #fontName = 'Elfreth'
@@ -41,7 +43,7 @@ fontPath = '/Users/jtd/JTD Type Dropbox/JTD/TypeTools/TypeProofer/prooferFonts/'
 #font size for the proofs
 proofFontSize = 36
 
-fontVers = '191001V4'
+fontVers = '191002V1'
 titleFont = 'Elfreth%s-Black' % fontVers
 
 #caption font & font size
@@ -139,7 +141,7 @@ def kernGuy3(fSize):
                 
                 textSize(t)[1] only shows the height for one line, unless they are 
                 explicitly declared in the MiscWords.py file as multi-line. Therefore, 
-                we are using the width of the line a dividing it to get our usable 
+                we are using the width of the line and dividing it to get our usable 
                 line height.'''
 
                 for fName in fontFamily:
@@ -248,6 +250,9 @@ def kernGuy3(fSize):
 #Universal Elements For Each Page
 
 
+'''
+Use this if you are hardcoding the fontPath variable to a directory
+
 fontFamily = []
 
 
@@ -255,7 +260,8 @@ fontFamily = []
 for files in glob.glob(f'{fontPath}*.otf'):
     fontFamily.append(files)
     fontFamily.sort()
-    #print(fontFamily)
+    print(fontFamily)
+'''
 
 def name():
     for fName in fontFamily:
