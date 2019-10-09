@@ -33,18 +33,8 @@ foundryName = 'JTD, LLC'
 #==========================================
 #Fonts
 
-#location of the fonts which you want to proof
-fontPath = getFile('Choose you fonts',None,None,None,True)
-fontFamily = fontPath
-
-#name of the font being proofed
-#fontName = 'Elfreth'
-
 #font size for the proofs
 proofFontSize = 36
-
-fontVers = '191002V1'
-titleFont = 'Elfreth%s-Black' % fontVers
 
 #caption font & font size
 captionFont = 'ArrayMonoV1001-Regular'    
@@ -249,6 +239,9 @@ def kernGuy3(fSize):
 #==========================================
 #Universal Elements For Each Page
 
+#location of the fonts which you want to proof
+fontPath = getFile('Choose you fonts',None,None,None,True)
+fontFamily = fontPath
 
 '''
 Use this if you are hardcoding the fontPath variable to a directory
@@ -327,6 +320,9 @@ def caption(captionText,x,y):
 PageName = ""
 header()
 
+
+titleFont = fontFamily[0]
+
 fs = FormattedString(
         fontName, 
         font=titleFont,
@@ -383,9 +379,6 @@ kernGuy(proofFontSize,lcYSpacing,(h * 2))
 
 PageName = fontName
 kernGuy(proofFontSize,lcZSpacing,(h * 2))
-
-PageName = fontName
-kernGuy(proofFontSize,numberWords,(h * 2))
 
 
 
