@@ -45,7 +45,7 @@ fontVers = '191001V4'
 titleFont = 'Elfreth%s-Black' % fontVers
 
 #caption font & font size
-captionFont = 'ArrayMonoV1001-Regular'
+captionFont = 'ArrayMonoV1001-Regular'    
 captionSize = 9
 
 #==========================================

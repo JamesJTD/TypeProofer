@@ -52,6 +52,9 @@ ucWords =  [
 
     ("Misc", "bílstjóri d'oïl etelälounas Tähki Ztopoření zwinglïaidd"),
 
-    ("Quotes", "“acacia” “bomb” “classic” “deed” “engine” “fluff” “gang” “health” “indri” “jayraj” “kick” “level” “medium” “noon” “oreo” “pump” “qirayuq” “rear” “says” “tent” “urdu” “vaclav” “window” “xerox” “yummy” “zechez”")
+    ("Quotes", "“acacia” “bomb” “classic” “deed” “engine” “fluff” “gang” “health” “indri” “jayraj” “kick” “level” “medium” “noon” “oreo” “pump” “qirayuq” “rear” “says” “tent” “urdu” “vaclav” “window” “xerox” “yummy” “zechez”"),
+
+
+    ("Numbers", "0102030405060708090 101121314115161718191 20212232425262728292 30313233435363738393 40414243445464748494 50515253545565758595 60616263646566768696 70717273747576778797 80818283848586878898 9091929394959697989")
 
 ]
