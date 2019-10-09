@@ -324,10 +324,21 @@ header()
 fs = FormattedString(
         fontName, 
         font=titleFont,
-        fontSize=120,
+        fontSize=1,
         fill=0,
         align="center"
     )
+
+textWidth, textHeight = textSize(fs)   
+myFontSize = marginWidth / textWidth
+fs = FormattedString(
+        fontName,
+        font=titleFont,
+        fontSize=myFontSize,
+        lineHeight=myFontSize, 
+        fill=0,
+        align="center")
+translate(0, -myFontSize-lineGap)
 textBox(fs, (0, 340, width(), 158))
 
 
