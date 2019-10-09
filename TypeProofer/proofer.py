@@ -23,7 +23,6 @@ margin = 40
 lineGap = -20
 marginWidth = width() - margin*2
 marginHeight = height() - margin*2
-h = height()
 
 #==========================================
 #Foundry
@@ -51,6 +50,8 @@ savePath = "/Users/jtd/Documents/DeleteStuff/"
 
 #==========================================
 #Misc Variables
+
+h = height()
 
 now = datetime.datetime.now()
 year = now.strftime("%Y")
@@ -113,6 +114,9 @@ def kernGuy2(fSize,pageLength):
 
 Creates a page where the length of the page is based on the length of text'''
 
+
+
+
 def kernGuy3(fSize):
     for a in ucWords:
         primaryLetter,text = a
@@ -147,7 +151,7 @@ def kernGuy3(fSize):
 
                     pp.p = (tw / 2.4) + (fSize* 2)
 
-                    print(tw)
+                    #print(tw)
 
                     pp.p += margin * len(fontFamily)
 
@@ -211,9 +215,9 @@ def kernGuy3(fSize):
                 print(pp.weightName)
                 return(pp.weightName)
 
+
+
             def makePage(self):
-
-
 
                 pp.addText()
 
@@ -340,7 +344,7 @@ fs = FormattedString(
         lineHeight=myFontSize, 
         fill=0,
         align="center")
-translate(0, -myFontSize-lineGap)
+translate(0, -myFontSize)
 textBox(fs, (0, 340, width(), 158))
 
 
