@@ -1,11 +1,11 @@
-This will be a tool for making proofs for in-progess typefaces. 
+This will be a tool for making proofs for in-progess typefaces. It currently reads .otf files and creates a print-ready .pdf
 
 
 TO USE:
 
-Create a directory to hold the fonts you want to proof (right now, only .otfs are set up to work).
+Make sure drawBot is installed (it works with drawBot as a module or in the App)
 
-Save fonts to this directory. 
+Change your page size (via the size() variable).
 
 Change savePath variable in proofer.py
 
