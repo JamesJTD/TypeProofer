@@ -2,16 +2,15 @@ from drawBot import *
 import sys
 import datetime
 import os
-import glob
 from fontTools.ttLib import TTFont
 from vanilla.dialogs import *
+from MiscWords import *
 
 sys.path.append('/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/')
 
 #This document doesn’t need to be included yet
 #from UDHR import *
 
-from MiscWords import *
 
 
 
