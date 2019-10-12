@@ -2,7 +2,6 @@ from drawBot import *
 import sys
 import datetime
 import os
-import glob
 from fontTools.ttLib import TTFont
 from vanilla.dialogs import *
 
