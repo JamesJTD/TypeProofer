@@ -3,6 +3,8 @@ import sys
 import datetime
 import os
 from fontTools.ttLib import TTFont
+from vanilla.vanillaWindows import *
+from vanilla import *
 from vanilla.dialogs import *
 
 sys.path.append('/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/')
@@ -11,7 +13,6 @@ sys.path.append('/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7
 #from UDHR import *
 
 from MiscWords import *
-
 
 
 #==========================================
@@ -114,14 +115,18 @@ def kernGuy2(fSize,pageLength):
 
 Creates a page where the length of the page is based on the length of text'''
 
-
-
-
 def kernGuy3(fSize):
     for a in ucWords:
         primaryLetter,text = a
         t = ''
-        t += f"{text}"
+        if allCaps == 1:
+
+            t += f"{text}".upper()
+
+        else:
+
+            t += f"{text}"
+
 
         class proofPage:
 
@@ -130,6 +135,8 @@ def kernGuy3(fSize):
                 self.pageLength = h
 
             def addText(self):
+
+                
 
                 '''This needs work to adjust get the th variable to show up properly
                 
@@ -246,6 +253,10 @@ def kernGuy3(fSize):
 #location of the fonts which you want to proof
 fontPath = getFile('Choose you fonts',None,None,None,True)
 fontFamily = fontPath
+
+allCaps = askYesNo("All Caps?")
+
+print(allCaps)
 
 '''
 Use this if you are hardcoding the fontPath variable to a directory
