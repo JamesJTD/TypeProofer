@@ -83,34 +83,6 @@ def kernGuy(fSize,letterString,pageLength):
 
     restore()
 
-
-#Kerning/Spacing Function Version 2 which uses tuples instead of individual lists
-def kernGuy2(fSize,pageLength):
-    for a in ucWords:
-        primaryLetter,text = a
-        t = ''
-        t += f"{text}"
-        newPage(width(), pageLength)
-        header()
-        caption(f"{primaryLetter}", 0,50)
-
-        translate(0, height()-margin)
-        save()
-        for fName in fontFamily:
-
-            txtHeight = (marginHeight * 2) / len(fontFamily)
-            fs = FormattedString(
-                t,
-                font=fName,
-                fontSize=fSize,
-                lineHeight=fSize * 1.1,
-                fill=0,
-                align="left"
-            )
-            translate(0, - txtHeight)
-            f = textBox(fs, (margin, ((margin / 4)), marginWidth, txtHeight))            
-        restore()
-
 '''Kerning/Spacing Function Version 3 which uses tuples instead of individual lists
 
 Creates a page where the length of the page is based on the length of text'''
@@ -150,11 +122,7 @@ def kernGuy3(fSize):
                     
                     font(fName, fSize)
                     lineHeight(fSize * 1.1)
-
-
                     tw, th = textSize(t)
-
-                    #tw += 50
 
                     pp.p = (tw / 2.4) + (fSize* 2)
 
@@ -251,9 +219,9 @@ def kernGuy3(fSize):
 #Universal Elements For Each Page
 
 #location of the fonts which you want to proof
-fontPath = getFile('Choose you fonts',None,None,None,True)
-fontFamily = fontPath
+fontFamily = getFile('Choose you fonts',None,None,None,True)
 
+#make dialog box to get all caps
 allCaps = askYesNo("All Caps?")
 
 print(allCaps)
