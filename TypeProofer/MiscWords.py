@@ -39,7 +39,7 @@ ucWords =  [
     ("Title Case P", "Padres Pb Pc Pd Penny Pfiefer Pgnunnithan Phone Pineapple Pjevanija Pk Plowshare Pm Pn Poppers Pp Pq Prenatal Pseudoblepsis Ptolemy Purposeful Pv Pw Px Pyythagoreanism Pz"),
     ("Title Case Q", "Qantas Qbinomial Qc Qd Qepic Qf Qg Qh Qinhuangdao Qj Qk Qleiat Qm Qn Qo Qplaze Qq Qrupweio Qstar Qtoctave Quintessential Qv Qw Qx Qy Qzzylaghash"),
     ("Title Case R", "Rainbow Rbalakrishna Rciroan Rd Resourceful Rf Rguyism Rheingulden Riddler Rjazanskaja Rk Rl Rm Rn Romantic Rp Rq Rr Rs Rtasya Rubbermaid Rvarizzi Rw Rx Ry Rz"),
-    ("Title Case S", "Sally Sbadigliato Sc Sd Se Sfumato Sgraffito Sh Silly Sjaelland Sk Sloop Smooth Sn So Speakeasy Square Sr Ss St Sunny Svengali Sw Sx Sy Szechuans"),
+    ("Title Case S", "Sally Sbadigliato Sc Sd Se Sfumato Sgraffito Sh Silly Sjaelland Sk Sloop Smooth Sn So Speakeasy Square Sr Ss St Sunny Svengali Sw Sx Systemic Szechuans"),
     ("Title Case T", "Tallahassi Tbilisi Tc Tdamodaran Te Tfmtkaytfo Tgifriday Thursday Timmy Tjamuaha Tk Tloquenahuaque Tm Tn Topographic Tp Tq Tr Tsarina Tt Tuple Tvone Twins Tx Typography Tzentales"),
     ("Title Case U", "Uakari Ubiquity Uc Udometer Uefa Ufologist Ugrian Uhuru Uintatheriidae Uj Uk Ulcerogenic Um Un Uo Update Uq Urologist Us Utrecht Uu Uv Uw Ux Uy Uz"),
     ("Title Case V", "Vanilla Vbanetwork Vc Vd Ve Vfoc Vg Vh Village Vjerojatnost Vk Vlogger Vm Vn Vocoder Vp Vq Vraisemblance Vsevolod Vtacnik Vu Vv Vw Vx Vyborg Vz"),
@@ -53,6 +53,7 @@ ucWords =  [
     ("Quotes", "“acacia” “bomb” “classic” “deed” “engine” “fluff” “gang” “health” “indri” “jayraj” “kick” “level” “medium” “noon” “oreo” “pump” “qirayuq” “rear” “says” “tent” “urdu” “vaclav” “window” “xerox” “yummy” “zechez”"),
 
 
-    ("Numbers", "0102030405060708090 101121314115161718191 20212232425262728292 30313233435363738393 40414243445464748494 50515253545565758595 60616263646566768696 70717273747576778797 80818283848586878898 9091929394959697989")
+    ("Numbers", "0102030405060708090 101121314115161718191 20212232425262728292 30313233435363738393 40414243445464748494 50515253545565758595 60616263646566768696 70717273747576778797 80818283848586878898 9091929394959697989"),
+    ("Currency", "$245,096 £245,096 245,096€ 245,096¥ 245,096¢ 245,096₫ 245,096ƒ")
 
 ]
